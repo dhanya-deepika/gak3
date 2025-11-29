@@ -3,15 +3,11 @@ import React, { useState, useEffect } from "react";
 
 export default function HeroSection() {
   const slides = [
-      { src: "/homepagebanners/gak5.jpg", text: "Your Shortcut to Smart Real Estate Investment" },
-       { src: "/homepagebanners/gak4.jpg", text: "Real Estate Investment, Reimagined" },
-       { src: "/homepagebanners/gak3.jpg", text: "India's First Sky-High Residences" },
-
+    { src: "/homepagebanners/gak5.jpg", text: "Your Shortcut to Smart Real Estate Investment" },
+    { src: "/homepagebanners/gak4.jpg", text: "Real Estate Investment, Reimagined" },
+    { src: "/homepagebanners/gak3.jpg", text: "India's First Sky-High Residences" },
     { src: "/homepagebanners/gak1.jpg", text: "A Life in CinQ" },
     { src: "/homepagebanners/gak2.jpg", text: "Exclusivity at its Peak" },
-
-
-
   ];
 
   const [current, setCurrent] = useState(0);
@@ -44,7 +40,17 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-black/30"></div>
 
             {/* Centered Text */}
-            <div className="absolute inset-0 flex justify-center items-center px-4 text-center">
+            <div
+              className={`absolute inset-0 flex transition-all duration-700 ${
+                i === 2
+                  ? "justify-center items-end pb-10 text-center"           // Slide 3 → bottom center
+                  : i === 3
+                  ? "justify-start items-center text-left pl-10 sm:pl-20"   // Slide 4 → left center + padding
+                  : i === 4
+                  ? "justify-center items-end pb-10 text-center"            // Slide 5 → bottom center
+                  : "justify-center items-center text-center"               // Others → center center
+              }`}
+            >
               <h2
                 className={`text-white font-semibold text-2xl sm:text-2xl md:text-4xl leading-snug tracking-tight transition-opacity duration-1000 ${
                   i === current ? "opacity-100" : "opacity-0"
@@ -57,6 +63,8 @@ export default function HeroSection() {
                 {slide.text}
               </h2>
             </div>
+
+
           </div>
         ))}
       </div>
