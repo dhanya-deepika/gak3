@@ -92,7 +92,7 @@ export default function OurStory() {
         {/* Image */}
         <div className="flex justify-center">
           <img
-            src="/ourstory.jpg"
+            src="/indian.webp"
             alt="Our Story"
             className="rounded-[40px] object-cover"
             style={{ width: "615px", height: "461px" }}
