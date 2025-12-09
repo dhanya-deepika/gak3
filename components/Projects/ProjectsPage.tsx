@@ -599,23 +599,39 @@ export default function ProjectsPage() {
                   </h3>
 
                   <div className="space-y-2 text-[15px] text-black mt-2">
+                    {/* Location */}
                     <p className="flex items-center gap-2">
                       <Image src="/icons/location.png" alt="location" width={20} height={20} />
                       {project.name}
                     </p>
+
+                    {/* BHK - detect from companies[] */}
                     <p className="flex items-center gap-2">
                       <Image src="/icons/bed.png" alt="bhk" width={20} height={20} />
-                      3, 3.5, 4 & 4.5 BHK
+                      {project.companies.find((item) =>
+                        item.toLowerCase().includes("bhk")
+                      ) || "BHK Not Available"}
                     </p>
+
+                    {/* Status */}
                     <p className="flex items-center gap-2">
-                      <Image src="/icons/time.png" alt="launch" width={20} height={20} />
-                      Pre Launch
+                      <Image src="/icons/time.png" alt="status" width={20} height={20} />
+                      {project.companies.find((item) =>
+                        ["under", "ready", "pre"].some((key) =>
+                          item.toLowerCase().includes(key)
+                        )
+                      ) || "Status Not Available"}
                     </p>
+
+                    {/* SFT / Area */}
                     <p className="flex items-center gap-2">
                       <Image src="/icons/slide.png" alt="area" width={20} height={20} />
-                      1680 sqft - 4550 sqft
+                      {project.companies.find((item) =>
+                        item.toLowerCase().includes("sft")
+                      ) || "Area Not Available"}
                     </p>
                   </div>
+
 
                   <div className="mt-3 text-sm text-gray-600 flex flex-col flex-grow">
                     {expandedCard === idx ? (

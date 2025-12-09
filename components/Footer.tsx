@@ -395,7 +395,8 @@ export default function FooterSection() {
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 md:gap-12 w-full border-t border-gray-200 pt-6">
           {/* Logo + Social */}
           <div className="flex flex-col items-center md:flex-row md:items-center gap-6 md:gap-12 w-full md:w-auto">
-            <img src="/gakicon.png" alt="GAK Group" className="h-[66px] w-[90px]" />
+            <img src="/gakicon.png" alt="GAK Group" className="h-[66px] w-[90px] drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]
+" />
             <div className="flex flex-row gap-6 text-black text-xl justify-center md:justify-start">
               <a href="https://www.facebook.com/gakgroupindia" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF />
@@ -406,7 +407,7 @@ export default function FooterSection() {
               <a href="https://www.youtube.com/@gakgroup/" target="_blank" rel="noopener noreferrer">
                 <FaYoutube />
               </a>
-              <a href="https://www.instagram.com/gakgroupindia/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/gakgroupindia/" target="_blank" rel="noopesner noreferrer">
                 <FaInstagram />
               </a>
             </div>

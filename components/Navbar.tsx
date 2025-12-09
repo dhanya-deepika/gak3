@@ -51,9 +51,15 @@ export default function Navbar() {
             alt="GAK Group Logo"
             width={100}
             height={70}
-            className="object-contain sm:w-[100px] sm:h-[70px] w-[60px] h-[45px]"
+            className="
+              object-contain
+              sm:w-[100px] sm:h-[70px]
+              w-[60px] h-[45px]
+              drop-shadow-[0_0_15px_white]
+            "
             priority
           />
+
         </Link>
 
         {/* Desktop Links */}

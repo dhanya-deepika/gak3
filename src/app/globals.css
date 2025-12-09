@@ -3,22 +3,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html,
 body {
   font-family: "Sora", sans-serif;
-}
-
-body {
-  @apply font-sans text-gray-900;
-}
-html,
-body {
   overflow-x: hidden;
 }
 
+/* Light mode ONLY */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  color-scheme: light !important;
 }
 
 @theme inline {
@@ -28,29 +24,24 @@ body {
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* REMOVE DARK MODE ENTIRELY — don't override background */
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--background) !important;
+  color: var(--foreground) !important;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Hide scrollbar but allow scroll */
+/* Scrollbar hide */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 .scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
 html {
-  color-scheme: light;
-  background-color: #fff;
-  color: #000;
+  color-scheme: light !important;
+  background-color: #fff !important;
+  color: #000 !important;
 }

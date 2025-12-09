@@ -3,7 +3,7 @@ import React from "react";
 
 export default function OurStory() {
   return (
-    <section className="relative py-20 bg-white flex justify-center px-4 overflow-hidden">
+    <section className="relative bg-white py-20 bg-white flex justify-center px-4 overflow-hidden">
       {/* Decorative Vector Image with custom rotation via inline style */}
       <img
         src="/lines/vector1.png"
